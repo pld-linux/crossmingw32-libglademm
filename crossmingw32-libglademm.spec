@@ -11,6 +11,7 @@ Source0:	http://ftp.gnome.org/pub/gnome/sources/libglademm/2.6/%{_realname}-%{ve
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	crossmingw32-gcc-c++
 BuildRequires:	crossmingw32-gtkmm >= 2.10.0
 BuildRequires:	crossmingw32-libglade2 >= 2.6.0
 BuildRequires:	libtool >= 2:1.4d
