@@ -1,24 +1,24 @@
 Summary:	C++ wrappers for libglade (cross mingw32 version)
 Summary(pl.UTF-8):	Interfejsy C++ dla libglade (wersja skrośna mingw32)
-%define		_realname   libglademm
-Name:		crossmingw32-%{_realname}
-Version:	2.6.3
+%define		realname   libglademm
+Name:		crossmingw32-%{realname}
+Version:	2.6.4
 Release:	1
 License:	GPL
 Group:		Development/Libraries
-Source0:	http://ftp.gnome.org/pub/gnome/sources/libglademm/2.6/%{_realname}-%{version}.tar.bz2
-# Source0-md5:	3dd3c3777c4407b8a330bd79089ddbfc
+Source0:	http://ftp.gnome.org/pub/gnome/sources/libglademm/2.6/%{realname}-%{version}.tar.bz2
+# Source0-md5:	ca0666f1d23cdffb89017ebb55954148
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	crossmingw32-gcc-c++
 BuildRequires:	crossmingw32-gtkmm >= 2.10.0
-BuildRequires:	crossmingw32-libglade2 >= 2.6.0
+BuildRequires:	crossmingw32-libglade2 >= 2.6.1
 BuildRequires:	libtool >= 2:1.4d
 BuildRequires:	perl-base
 BuildRequires:	pkgconfig
 Requires:	crossmingw32-gtkmm >= 2.10.0
-Requires:	crossmingw32-libglade2 >= 2.6.0
+Requires:	crossmingw32-libglade2 >= 2.6.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		no_install_post_strip	1
@@ -57,7 +57,7 @@ Summary:	DLL libglademm library for Windows
 Summary(pl.UTF-8):	Biblioteka DLL libglademm dla Windows
 Group:		Applications/Emulators
 Requires:	crossmingw32-gtkmm-dll >= 2.10.0
-Requires:	crossmingw32-libglade2-dll >= 2.6.0
+Requires:	crossmingw32-libglade2-dll >= 2.6.1
 Requires:	wine
 
 %description dll
@@ -67,7 +67,7 @@ DLL libglademm library for Windows.
 Biblioteka DLL libglademm dla Windows.
 
 %prep
-%setup -q -n %{_realname}-%{version}
+%setup -q -n %{realname}-%{version}
 
 %build
 export PKG_CONFIG_PATH=%{_prefix}/lib/pkgconfig
@@ -97,6 +97,7 @@ mv -f $RPM_BUILD_ROOT%{_prefix}/bin/*.dll $RPM_BUILD_ROOT%{_dlldir}
 %endif
 
 rm -rf $RPM_BUILD_ROOT%{_libdir}/libglademm-2.4/proc
+rm -rf $RPM_BUILD_ROOT%{_datadir}/{devhelp,doc/gnomemm-2.6}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -106,9 +107,9 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog NEWS
 %{_libdir}/libglademm-2.4.la
 %{_libdir}/libglademm-2.4.dll.a
-%{_includedir}/%{_realname}-2.4
-%{_libdir}/%{_realname}-2.4
-%{_pkgconfigdir}/%{_realname}-2.4.pc
+%{_includedir}/libglademm-2.4
+%{_libdir}/libglademm-2.4
+%{_pkgconfigdir}/libglademm-2.4.pc
 
 %files static
 %defattr(644,root,root,755)
