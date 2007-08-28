@@ -16,7 +16,7 @@ BuildRequires:	crossmingw32-gtkmm >= 2.10.0
 BuildRequires:	crossmingw32-libglade2 >= 2.6.1
 BuildRequires:	libtool >= 2:1.4d
 BuildRequires:	perl-base
-BuildRequires:	pkgconfig
+BuildRequires:	pkgconfig >= 1:0.15
 Requires:	crossmingw32-gtkmm >= 2.10.0
 Requires:	crossmingw32-libglade2 >= 2.6.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -25,7 +25,6 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		target			i386-mingw32
 %define		target_platform 	i386-pc-mingw32
-%define		arch			%{_prefix}/%{target}
 
 %define		_sysprefix		/usr
 %define		_prefix			%{_sysprefix}/%{target}
@@ -70,7 +69,7 @@ Biblioteka DLL libglademm dla Windows.
 %setup -q -n %{realname}-%{version}
 
 %build
-export PKG_CONFIG_PATH=%{_prefix}/lib/pkgconfig
+export PKG_CONFIG_LIBDIR=%{_prefix}/lib/pkgconfig
 %{__libtoolize}
 %{__aclocal} -I scripts
 %{__autoconf}
