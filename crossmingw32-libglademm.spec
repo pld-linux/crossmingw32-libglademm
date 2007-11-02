@@ -2,23 +2,23 @@ Summary:	C++ wrappers for libglade (cross mingw32 version)
 Summary(pl.UTF-8):	Interfejsy C++ dla libglade (wersja skrośna mingw32)
 %define		realname   libglademm
 Name:		crossmingw32-%{realname}
-Version:	2.6.4
+Version:	2.6.5
 Release:	1
-License:	GPL
+License:	LGPL v2+
 Group:		Development/Libraries
-Source0:	http://ftp.gnome.org/pub/gnome/sources/libglademm/2.6/%{realname}-%{version}.tar.bz2
-# Source0-md5:	ca0666f1d23cdffb89017ebb55954148
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/libglademm/2.6/%{realname}-%{version}.tar.bz2
+# Source0-md5:	4d868c9c1bef2480c47d07ef63619e27
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	crossmingw32-gcc-c++
-BuildRequires:	crossmingw32-gtkmm >= 2.10.0
-BuildRequires:	crossmingw32-libglade2 >= 2.6.1
+BuildRequires:	crossmingw32-gtkmm >= 2.12.1
+BuildRequires:	crossmingw32-libglade2 >= 2.6.2
 BuildRequires:	libtool >= 2:1.4d
 BuildRequires:	perl-base
 BuildRequires:	pkgconfig >= 1:0.15
-Requires:	crossmingw32-gtkmm >= 2.10.0
-Requires:	crossmingw32-libglade2 >= 2.6.1
+Requires:	crossmingw32-gtkmm >= 2.12.1
+Requires:	crossmingw32-libglade2 >= 2.6.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		no_install_post_strip	1
@@ -55,8 +55,8 @@ Statyczna biblioteka libglademm (wersja skrośna mingw32).
 Summary:	DLL libglademm library for Windows
 Summary(pl.UTF-8):	Biblioteka DLL libglademm dla Windows
 Group:		Applications/Emulators
-Requires:	crossmingw32-gtkmm-dll >= 2.10.0
-Requires:	crossmingw32-libglade2-dll >= 2.6.1
+Requires:	crossmingw32-gtkmm-dll >= 2.12.1
+Requires:	crossmingw32-libglade2-dll >= 2.6.2
 Requires:	wine
 
 %description dll
