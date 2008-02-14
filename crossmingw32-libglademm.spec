@@ -2,12 +2,12 @@ Summary:	C++ wrappers for libglade (cross mingw32 version)
 Summary(pl.UTF-8):	Interfejsy C++ dla libglade (wersja skrośna mingw32)
 %define		realname   libglademm
 Name:		crossmingw32-%{realname}
-Version:	2.6.5
+Version:	2.6.6
 Release:	1
 License:	LGPL v2+
 Group:		Development/Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/libglademm/2.6/%{realname}-%{version}.tar.bz2
-# Source0-md5:	4d868c9c1bef2480c47d07ef63619e27
+# Source0-md5:	c4b2440d5e816ff4d692a246bce55dfb
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
