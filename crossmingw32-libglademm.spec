@@ -2,12 +2,12 @@ Summary:	C++ wrappers for libglade (cross mingw32 version)
 Summary(pl.UTF-8):	Interfejsy C++ dla libglade (wersja skrośna mingw32)
 %define		realname   libglademm
 Name:		crossmingw32-%{realname}
-Version:	2.6.6
+Version:	2.6.7
 Release:	1
 License:	LGPL v2+
 Group:		Development/Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/libglademm/2.6/%{realname}-%{version}.tar.bz2
-# Source0-md5:	c4b2440d5e816ff4d692a246bce55dfb
+# Source0-md5:	f9ca5b67f6c551ea98790ab5f21c19d0
 URL:		http://www.gtkmm.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -33,6 +33,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_dlldir			/usr/share/wine/windows/system
 %define		__cc			%{target}-gcc
 %define		__cxx			%{target}-g++
+
+%ifnarch %{ix86}
+# arch-specific flags (like alpha's -mieee) are not valid for i386 gcc
+%define		optflags	-O2
+%endif
+# -z options are invalid for mingw linker
+%define		filterout_ld	-Wl,-z,.*
 
 %description
 C++ wrappers for libglade (cross mingw32 version).
