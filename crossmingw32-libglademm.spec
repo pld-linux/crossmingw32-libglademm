@@ -8,7 +8,7 @@ License:	LGPL v2+
 Group:		Development/Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/libglademm/2.6/%{realname}-%{version}.tar.bz2
 # Source0-md5:	c4b2440d5e816ff4d692a246bce55dfb
-URL:		http://www.gnome.org/
+URL:		http://www.gtkmm.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	crossmingw32-gcc-c++
