@@ -1,5 +1,5 @@
-Summary:	C++ wrappers for libglade (cross mingw32 version)
-Summary(pl.UTF-8):	Interfejsy C++ dla libglade (wersja skrośna mingw32)
+Summary:	C++ wrappers for libglade (cross MinGW32 version)
+Summary(pl.UTF-8):	Interfejsy C++ dla libglade (wersja skrośna MinGW32)
 %define		realname   libglademm
 Name:		crossmingw32-%{realname}
 Version:	2.6.7
@@ -48,16 +48,16 @@ C++ wrappers for libglade (cross mingw32 version).
 Interfejsy C++ dla libglade (wersja skrośna mingw32).
 
 %package static
-Summary:	Static libglademm library (cross mingw32 version)
-Summary(pl.UTF-8):	Statyczna biblioteka libglademm (wersja skrośna mingw32)
+Summary:	Static libglademm library (cross MinGW32 version)
+Summary(pl.UTF-8):	Statyczna biblioteka libglademm (wersja skrośna MinGW32)
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description static
-Static libglademm library (cross mingw32 version).
+Static libglademm library (cross MinGW32 version).
 
 %description static -l pl.UTF-8
-Statyczna biblioteka libglademm (wersja skrośna mingw32).
+Statyczna biblioteka libglademm (wersja skrośna MinGW32).
 
 %package dll
 Summary:	DLL libglademm library for Windows
