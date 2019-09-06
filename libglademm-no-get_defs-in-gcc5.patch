@@ -1,0 +1,19 @@
+--- libglademm-2.6.7/tools/Makefile.am~	2008-07-01 11:40:39.000000000 +0200
++++ libglademm-2.6.7/tools/Makefile.am	2015-10-05 20:15:57.333539954 +0200
+@@ -1,4 +1,4 @@
+-SUBDIRS = extra_defs_gen m4
++SUBDIRS = m4
+ 
+ include $(top_srcdir)/tools/Makefile_list_of_sources.am_fragment
+ 
+--- libglademm-2.6.7/configure.in~	2008-09-21 15:23:11.000000000 +0200
++++ libglademm-2.6.7/configure.in	2015-10-05 20:23:08.455086518 +0200
+@@ -143,7 +143,7 @@
+ 
+ # This macro is installed by glibmm
+ # Doxygen needs the path to the installed perl.
+-GLIBMM_CHECK_PERL([5.6.0])
++# GLIBMM_CHECK_PERL([5.6.0])
+ 
+ #########################################################################
+ #  Dependancy checks
