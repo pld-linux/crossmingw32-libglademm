@@ -3,7 +3,7 @@ Summary(pl.UTF-8):	Interfejsy C++ dla libglade (wersja skrośna MinGW32)
 %define		realname   libglademm
 Name:		crossmingw32-%{realname}
 Version:	2.6.7
-Release:	2
+Release:	3
 License:	LGPL v2+
 Group:		Development/Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/libglademm/2.6/%{realname}-%{version}.tar.bz2
